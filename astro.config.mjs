@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   // The URL of your deployed site
-  site: "https://jakiemurals.github.io/JaPaNM.xyz/",
+  site: "https://JakieMurals.github.io/JaPaNM.xyz/",
   // The base path for your GitHub Pages repository
   base: "/JaPaNM.xyz/",
   // Output type for static site generation
