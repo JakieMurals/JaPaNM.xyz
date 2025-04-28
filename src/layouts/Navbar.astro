@@ -36,12 +36,12 @@ content: [
         <a href="/JaPaNM" class="relative flex items-center gap-3">
           <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
             <img
-              src="/images/JapanmLogo.png"
-              alt="Logo"
+              src="/JapanmLogo.png"
+              alt=""
               class="w-full h-full object-contain"
             />
           </div>
-          <div class="inline-flex text-lg font-semibold text-heading-1">
+          <div class="inline-flex text-lg font-semibold text-heading-1 bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 via-primary to-green-600">
             JaPaNM
           </div>
         </a>
@@ -78,7 +78,6 @@ content: [
         <button
           aria-label="toggle theme"
           class="flex p-4 rounded-full text-fg active:children:rotate-90 dark:active:children:rotate-90 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-          onclick="document.documentElement.classList.toggle('dark')"
         >
           <span class="transition-all duration-300 ease-linear">
             <!-- Dark Mode Icon -->
@@ -110,3 +109,25 @@ content: [
     </nav>
   </Container>
 </header>
+
+<script type="module">
+  // Check for saved theme in localStorage
+  const savedTheme = localStorage.getItem("theme");
+
+  // If no theme is saved, default to dark mode
+  if (!savedTheme) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else if (savedTheme === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+
+  // Theme toggle button functionality
+  const themeToggleButton = document.querySelector("[aria-label='toggle theme']");
+  themeToggleButton.addEventListener("click", () => {
+    const isDarkMode = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  });
+</script>
