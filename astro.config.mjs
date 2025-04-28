@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://jakiemurals.github.io",
-  base: "/JaPaNM.xyz/",
+  base: "/JaPaNM.xyz",
 });
