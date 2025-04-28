@@ -7,4 +7,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://jakiemurals.github.io",
   base: "/JaPaNM.xyz",
+  
 });
