@@ -59,4 +59,52 @@ body {
   /* padding: 30px 30px 30px 30px; */
 }
 
+/* Styles for the button */
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.p-2 {
+  padding: 10px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.text-fg {
+  color: var(--color-fg); /* Using CSS variable */
+}
+
+.hover\:bg-neutral-100:hover {
+  background-color: var(--color-neutral-100); /* Using CSS variable */
+}
+
+.dark\:hover\:bg-neutral-800:hover {
+  background-color: var(--color-neutral-800); /* Using CSS variable */
+}
+
+/* Styles for the span */
+.transition-all {
+  transition: all;
+}
+
+.duration-300 {
+  transition-duration: 0.3s;
+}
+
+.ease-linear {
+  transition-timing-function: linear;
+}
+
+/* Correctly target the span child */
+.active\:children\:rotate-90:active > span {
+  rotate: 90deg;
+}
+
+.dark\:active\:children\:rotate-90:active > span {
+  rotate: 90deg;
+}
+
 
