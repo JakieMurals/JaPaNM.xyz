@@ -1,0 +1,6 @@
+.gradiant-text {
+  display: inline; /* Ensures it behaves like inline text */
+  margin: 0;       /* Removes any margin */
+  padding: 0;      /* Removes any padding */
+  line-height: 1;  /* Ensures consistent line height */
+}

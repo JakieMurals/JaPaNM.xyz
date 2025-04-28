@@ -1,0 +1,70 @@
+---
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+import GradiantText from "../shared/GradiantText.astro";
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section id="features" class={`flex flex-col ${className}`}>
+  <Container className="w-full max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title>
+        <GradiantText>Editing</GradiantText>
+      </Title>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
+      <!-- Video Card 1 -->
+      <div class="relative rounded-3xl overflow-hidden shadow-lg h-[400px]">
+        <iframe
+          src="https://player.vimeo.com/video/1074933663?h=821e97aef9&badge=0&autopause=0&player_id=0&app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          title="UN1T"
+        ></iframe>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="relative rounded-3xl overflow-hidden shadow-lg h-[400px]">
+        <iframe
+          src="https://player.vimeo.com/video/1074932995?h=6ddae6c38e&badge=0&autopause=0&player_id=0&app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          title="Healthy Corn"
+        ></iframe>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="relative rounded-3xl overflow-hidden shadow-lg h-[400px]">
+        <iframe
+          src="https://player.vimeo.com/video/1074932839?h=1c73e01ffa&badge=0&autopause=0&player_id=0&app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          title="Inferiors Film: Art Department Intro"
+        ></iframe>
+      </div>
+
+      <!-- Video Card 4 -->
+      <div class="relative rounded-3xl overflow-hidden shadow-lg h-[400px]">
+        <iframe
+          src="https://player.vimeo.com/video/1074933462?h=6283f4c6fc&badge=0&autopause=0&player_id=0&app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          title="Megapolis_Collage_Portfolio"
+        ></iframe>
+      </div>
+    </div>
+  </Container>
+</section>

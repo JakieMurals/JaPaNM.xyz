@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+
+import spotify from "../../assets/logos/spotify.png";
+import slack from "../../assets/logos/slack.png";
+import paypallogo from "../../assets/logos/paypallogo.png";
+import gravitymedialogo from "../../assets/logos/gravitymedialogo.svg";
+import foxsportslogo from "../../assets/logos/foxsportslogo.svg";
+import EWClogo from "../../assets/logos/EWClogo.svg";
+import DFIlogo from "../../assets/logos/DFIlogo.svg"; // Import the new SVG logo
+
+const brands = [
+  
+  {
+    id: 1,
+    name: "Gravity Media",
+    logo: gravitymedialogo, // Add the new logo here
+  },
+  {
+    id: 2,
+    name: "Fox Sports",
+    logo: foxsportslogo, // Add the new logo here
+  },
+  {
+    id: 3,
+    name: "Esports World Cup",
+    logo: EWClogo, // Add the new logo here
+  },
+  {
+    id: 4,
+    name: "Doha Film Institute",
+    logo: DFIlogo, // Add the new logo here
+  },
+];
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section class={`space-y-8 ${className}`}>
+  <Container className="space-y-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title>Best Practice experience with Industry Leading brands.</Title>
+    </div>
+    <div class="flex justify-center flex-wrap gap-4">
+      {
+        brands.map((brand) => (
+          <div class="p-4 sm:p-5 rounded-xl border border-box-border group bg-box-bg bg-white dark:bg-gray-800">
+            <Image
+              src={brand.logo}
+              width="100"
+              height="60"
+              alt={brand.name}
+              class="h-7 sm:h-10 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105 dark:invert"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</section>
