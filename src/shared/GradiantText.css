@@ -1,6 +1,12 @@
 .gradiant-text {
-  display: inline; /* Ensures it behaves like inline text */
-  margin: 0;       /* Removes any margin */
-  padding: 0;      /* Removes any padding */
-  line-height: 1;  /* Ensures consistent line height */
+  display: inline-block;           /* Allows more control over box model */
+  margin: 0;
+  padding-bottom: 0.1em;           /* Adds space for descenders like 'g' */
+  line-height: 1.2;                /* Prevents vertical clipping */
+  background-clip: text;
+  -webkit-background-clip: text;   /* Required for Safari */
+  color: transparent;
+}
+.gradiant-text-parent {
+  overflow: visible; /* Prevents clipping of child elements */
 }
